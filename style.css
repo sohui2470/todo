@@ -1,5 +1,5 @@
-.hello{
-  color: turquoise;
+.hidden{
+  display: none;
 }
 
 @media(max-width:800px){
@@ -11,7 +11,7 @@
     }
   }
   
-  @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
+  /* @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');} */
   
   html{
       background-color: white;
@@ -22,7 +22,21 @@
     color: black;
   }
 
-  #grid{
+  h1{
+    display: block;
+    padding: 30px;
+    text-align: center;
+    margin:0;
+    border-bottom: 3px solid lightgreen;
+    color: green;
+    transition: color 0.5s ease-in-out;
+  }
+
+  a{
+    line-height: 180%;
+  }
+
+  /* #grid{
     font-size: large;
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -34,22 +48,12 @@
   #list{
     padding-left: 50px;
     border-right: 3px solid lightgray;
-  }
-  h1{
-    display: block;
-    padding: 30px;
-    text-align: center;
-    margin:0;
-    border-bottom: 3px solid lightgreen;
-    color: green;
-    transition: color 0.5s ease-in-out;
-  }
-  #contents{
+  } */
+  
+  /* #contents{
     padding-left: 20px;
-  }
-  a{
-    line-height: 180%;
-  }
+  } */
+  
   a:link{color:black; text-decoration: none;}
   a:visited{color:gray; text-decoration: none;}
   a:hover{color:skyblue; text-decoration-line: underline;}

@@ -8,10 +8,32 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div id = "login-form">
-        <input type="text" placeholder ="what is your name?" />
+    <form id="login-form" class="hidden">
+        <input 
+        required
+        maxlength = "15"
+        type="text" placeholder="what is your name?"/>
         <button>Log In</button>
-        <script src="app.js"></script>
-    </div>
+    </form>
+    <h2 id="clock">00:00</h2>
+    <h1 id="greeting" class="hidden"></h1>
+    <form id="todo-form">
+        <input type="text" placeholder="Write a To-do and press Enter">
+    </form>
+    <ul id="todo-list"></ul>
+    <h3>
+        <div id="quote">
+            <span></span>
+            <p><span></span></p>
+        </div>
+    </h3>
+     <div>
+         <a href='https://google.com/'>Wanna go ogle?</a>
+      </div>
+    <script src="javascript/app.js"></script>
+    <script src="javascript/clock.js"></script>
+    <script src="javascript/quotes.js"></script>
+    <script src="javascript/background.js"></script>
+    <script src="javascript/todo.js"></script>
 </body>
-</html>
+</html> 
