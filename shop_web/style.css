@@ -1,0 +1,47 @@
+/* elements */
+html{
+  background-color: #BAB7A6;
+}
+button{
+  border-radius: 5px;
+}
+
+/* class */
+.roundBox {
+  display: block;
+  border:1px solid;
+  border-radius: 10px;
+  padding:10px; 
+  color: #4A483A;
+  background-color: beige;
+  text-align: center;
+  }
+.icon{
+  width: 5%;
+}
+.mainmenu{
+  display:block;
+  text-align: center;
+}
+.hidden{
+  display:none;
+}
+
+/* id */
+#hello{
+  display: block;
+  text-align: center;
+}
+#mainicon{
+  height:200px;
+  width: 240px;
+}
+#blue{
+  background-color: skyblue;
+}
+#yellow{
+  background-color: #FFFD6F;
+}
+#pink{
+  background-color: pink;
+}
