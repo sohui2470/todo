@@ -64,8 +64,7 @@ const br = document.createElement("br");
 
 function insertItems(){
   for (let i = 0; i < items.length; i++){
-    const item = document.querySelector(`div span:nth-child(${i+1})`);
-    item.insertBefore(br, null);
+    const item = document.querySelector(`.items li:nth-child(${i+1})`);
     let getItem = items[i];
     theImg = getItem.img;
     theTarget = getItem.target;
@@ -79,20 +78,8 @@ function insertItems(){
     itemIcon.classList.add("icon");
     itemIcon.src = theImg;
     item.appendChild(itemIcon);
-    // const copy = item.cloneNode(false);
-    // item.parentNode.insertBefore(copy, null);
     console.log(i);
   }
 }
 
-function handleBtnClick(event){
-  const btn = event.target.parentElement;
-  if(!== btnName){
-    .classList.add("hidden");
-  };
-
-}
-
 insertItems();
-
-button.addEventListener("click", handleBtnClick);

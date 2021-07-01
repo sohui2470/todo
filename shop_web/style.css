@@ -1,23 +1,52 @@
-/* elements */
-html{
-  background-color: #BAB7A6;
+:root {
+  /* color */
+  --color-background: #BAB7A6;
+  --color-beige: beige;
+  --color-blue: skyblue;
+  --color-pink: pink;
+  --color-yellow: #FFFD6F;
+  --color-brown: #4A483A;
+  --menuicon-size: 15px;
+  --icon-size: 30px;
+  --blank-space: 5px;
 }
-button{
-  border-radius: 5px;
+
+/* elements */
+html {
+  background-color: var(--color-background);
 }
 
 /* class */
-.roundBox {
-  display: block;
-  border:1px solid;
+.btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+}
+.items {
+  /* display: flex; */
+  width: 60%;
+  height: 60%;
+  list-style: none;
+}
+.item {
+  display: flex;
+  border: none;
   border-radius: 10px;
-  padding:10px; 
-  color: #4A483A;
-  background-color: beige;
+  padding:10px;
+  color: var(--color-brown);
+  background-color: var(--color-beige);
   text-align: center;
+  align-items: center;
   }
-.icon{
-  width: 5%;
+.menuicon {
+  width: var(--menuicon-size);
+  height: var(--menuicon-size);
+}
+.icon {
+  padding-left: var(--blank-space);
+  width: var(--icon-size);
+  height: var(--icon-size);
 }
 .mainmenu{
   display:block;
@@ -37,11 +66,11 @@ button{
   width: 240px;
 }
 #blue{
-  background-color: skyblue;
+  background-color: var(--color-blue);
 }
 #yellow{
-  background-color: #FFFD6F;
+  background-color: var(--color-yellow);
 }
 #pink{
-  background-color: pink;
+  background-color: var(--color-pink);
 }
