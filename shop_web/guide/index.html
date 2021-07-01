@@ -5,17 +5,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="src/main.js"></script>
 </head>
 <body>
   <!-- Logo -->
   <img src="img/logo.png" alt="logo" class="logo">
   <!-- Buttons -->
-  <buttons class="btn"><img src="img/blue_t.png" alt="tshirt" class="imgBtn"></buttons>
-  <buttons class="btn"><img src="img/blue_p.png" alt="pants" class="imgBtn"></buttons>
-  <buttons class="btn"><img src="img/blue_s.png" alt="skirt" class="imgBtn"></buttons>
-  <buttons class="btn"></buttons>
-  <buttons class="btn"></buttons>
-  <buttons class="btn"></buttons>
+  <buttons class="btn">
+    <img src="img/blue_t.png" alt="tshirt" class="imgBtn">
+  </buttons>
+  <buttons class="btn">
+    <img src="img/blue_p.png" alt="pants" class="imgBtn">
+  </buttons>
+  <buttons class="btn">
+    <img src="img/blue_s.png" alt="skirt" class="imgBtn">
+  </buttons>
+  <buttons class="btn colorBtn blue">Blue</buttons>
+  <buttons class="btn colorBtn yellow">Yellow</buttons>
+  <buttons class="btn colorBtn pink">Pink</buttons>
   <!-- Items -->
+  <ul class="items">
+    <li class="item">
+      <img src="img/blue_t.png" alt="tshirt" class="item__thumbnail">
+      <span class="item__description">male, large</span>
+    </li>
+  </ul>
 </body>
 </html>
