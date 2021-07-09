@@ -1,60 +1,14 @@
-.hidden{
+.hidden {
   display: none;
 }
+html {
+  font-family: Consolas, monospace;
+}
 
-@media(max-width:800px){
-    #grid{
-      display:block;
-    }
-    #list{
-      border-right:0;
-    }
-  }
-  
-  /* @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');} */
-  
-  html{
-      background-color: white;
-  text-decoration: none;
-  font-family: 'Noto Sans Kr', sans-serif;
-    font-family: Consolas, monospace;
-    border: 1px solid lightblue;
-    color: black;
-  }
-
-  h1{
-    display: block;
-    padding: 30px;
-    text-align: center;
-    margin:0;
-    border-bottom: 3px solid lightgreen;
-    color: green;
-    transition: color 0.5s ease-in-out;
-  }
-
-  a{
-    line-height: 180%;
-  }
-
-  /* #grid{
-    font-size: large;
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    padding: 10px;
-    word-spacing:3px;
-    letter-spacing:2px;
-  }
-  
-  #list{
-    padding-left: 50px;
-    border-right: 3px solid lightgray;
-  } */
-  
-  /* #contents{
-    padding-left: 20px;
-  } */
-  
-  a:link{color:black; text-decoration: none;}
-  a:visited{color:gray; text-decoration: none;}
-  a:hover{color:skyblue; text-decoration-line: underline;}
-  a:active{color:white; background-color: black;}
+.background_image{
+  display: flex;
+  width: 70%;
+  height: 70%;
+  align-items: center;
+  justify-content: center;
+}

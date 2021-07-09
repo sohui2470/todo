@@ -1,6 +1,22 @@
-const array = [1, 2, 3, 4];
+'use strict';
 
-function confirm(array) {
-  const result = array.every((x) => (x>0));
-  console.log(result);;
+function printEven() {
+  for (let i = 0; i<= 10; i++){
+    if (i % 2 !== 0){
+      console.log(i);
+    } else {
+      continue;
+    }
+  }
 }
+
+function printUntil(n) {
+  for(let i = 0; i <= 10; i++){
+    console.log(i);
+    if (i == n) {
+      break;
+    }
+  }f
+}
+printEven()
+printUntil(8);

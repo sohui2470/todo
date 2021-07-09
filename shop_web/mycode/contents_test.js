@@ -1,54 +1,9 @@
-const items = [
-  {
-  img: "assets/0.png",
-  target: "female",
-  size: "large size",
-  color: "pink",
-  category: "shirt"
-},{
-  img: "assets/1.png",
-  target: "man",
-  size: "small size",
-  color: "blue",
-  category: "pants"
-},{
-  img: "assets/2.png",
-  target: "man",
-  size: "large size",
-  color: "yellow",
-  category: "pants"
-},{
-  img: "assets/3.png",
-  target: "man",
-  size: "large size",
-  color: "yellow",
-  category: "skirt"
-},{
-  img: "assets/4.png",
-  target: "female",
-  size: "small size",
-  color: "blue",
-  category: "skirt"
-},{
-  img: "assets/5.png",
-  target: "male",
-  size: "large size",
-  color: "blue",
-  category: "shirt"
-},{
-  img: "assets/6.png",
-  target: "male",
-  size: "large size",
-  color: "yellow",
-  category: "shirt"
-},{
-  img: "assets/7.png",
-  target: "female",
-  size: "small size",
-  color: "pink",
-  category: "skirt"
-},
-];
+// Fetch the items from the JSON file
+function loadItems() {
+  return fetch('data/data.json')
+  .then(response => response.json())
+  .then(json => json.items);
+}
 
 function multiplyNode(node, count, deep){
   for (var i = 0; count - 1; i++){
@@ -58,11 +13,9 @@ function multiplyNode(node, count, deep){
   }
 }
 
-// multiplyNode(document.querySelector(".roundBox span"), 1, false);
-
 const br = document.createElement("br");
 
-function insertItems(){
+function insertItems(item){
   for (let i = 0; i < items.length; i++){
     const item = document.querySelector(`.items li:nth-child(${i+1})`);
     let getItem = items[i];
@@ -82,4 +35,5 @@ function insertItems(){
   }
 }
 
+loadItems();
 insertItems();
