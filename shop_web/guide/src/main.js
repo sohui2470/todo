@@ -1,3 +1,5 @@
+const HIDDEN_CLASSNAME = 'hidden';
+
 // Fetch the items from the JSON file
 function loadItems() {
   return fetch('data/data.json')
@@ -21,25 +23,76 @@ function createHTMLString(item) {
   `;
 }
 
-function onButtonClick(event, items) {
+// // Method 1. (guide code) filter items by "filter" if onButtonClick.
+// function onButtonClick(event, items) {
+//   const dataset = event.target.dataset;
+//   const key = dataset.key;
+//   const value = dataset.value;
+//   if (key == null || value == null) {
+//     return;
+//   }
+//   const filtered = items.filter(item => item[key] === value);
+//   displayItems(filtered);
+// }
+
+// // Method 2. (guide + my code) filter items using "classList" hidden, using 2 functions.
+// function onButtonClick(event, items) {
+//   const dataset = event.target.dataset;
+//   const key = dataset.key;
+//   const value = dataset.value;
+//   if (key == null || value == null) {
+//     return;
+//   }
+//   updateItems(items, key, value);
+// }
+
+// function updateItems(items, key, value) {
+//   let n = 1;
+//   while(n <= items.length){
+//     items.forEach(item => {
+//       const theItem = document.body.querySelector(`.item:nth-child(${n})`);
+//       if (item[key] === value) {
+//         theItem.classList.remove(HIDDEN_CLASSNAME);
+//       } else {
+//         theItem.classList.add(HIDDEN_CLASSNAME);
+//       }
+//       n++;
+//     });
+//   }
+// }
+
+// Method 3. (my code) filter using "classList" hidden, using 1 function.
+function onButtonHide(event, items) {
   const dataset = event.target.dataset;
   const key = dataset.key;
   const value = dataset.value;
   if (key == null || value == null) {
     return;
   }
-  const filtered = items.filter(item => item[key] === value);
-  displayItems(filtered);
+  let i = 1;
+  while(i <= items.length) {
+    items.forEach(item => {
+      const theItem = document.body.querySelector(`.item:nth-child(${i})`);
+        if (item[key] === value) {
+          theItem.classList.remove(HIDDEN_CLASSNAME);
+        } else {
+          theItem.classList.add(HIDDEN_CLASSNAME);
+        }
+        i++;
+    });  
+  }
 }
 
+// Event Listener
 function setEventListeners(items) {
   const logo = document.querySelector('.logo');
   const buttons = document.querySelector('.buttons');
   logo.addEventListener("click", () => displayItems(items));
-  buttons.addEventListener("click", () => onButtonClick(event, items));
+  buttons.addEventListener("click", () => onButtonHide(event, items));
+  // buttons.addEventListener("click", () => onButtonClick(event, items)); // the Guide Code
 }
 
-//main
+// Main
 loadItems()
   .then(items => {
     console.log(items);

@@ -82,6 +82,7 @@ body{
   height: 60%;
   list-style: none;
   padding-left: 0;
+  overflow-y: auto;
 }
 
 .item {
@@ -89,8 +90,7 @@ body{
   display: flex;
   align-items: center;
   padding: var(--base-space);
-  margin-botton: var(--base-space);
-  overflow-y: scroll;
+  margin-bottom: var(--base-space);
 }
 
 .item__thumbnail {
@@ -101,4 +101,8 @@ body{
 .item__description {
   margin-left: var(--base-space);
   font-size: var(--font-size);
+}
+
+.hidden {
+  display: none;
 }
