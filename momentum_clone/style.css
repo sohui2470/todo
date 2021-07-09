@@ -1,14 +1,55 @@
-.hidden {
-  display: none;
+:root {
+  /* color */
+  --color-green: rgb(78, 126, 101);
+
+  /* size */
+  --input-width:400px;
+  --input-height: 50px;
+  --font-size: 20px;
+  --margin-size: 5px;
+  --border-radius: 15px;
 }
+
 html {
   font-family: Consolas, monospace;
 }
 
-.background_image{
+button {
+  width: calc(var(--input-width)/3);
+  height: calc(var(--input-height));
+  text-align: center;
+  font-size: var(--font-size);
+  border-radius: var(--border-radius);
+}
+
+input {
+  border: solid 1px var(--color-green);
+  width: var(--input-width);
+  height: var(--input-height);
+  text-align: center;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size);
+}
+
+body, 
+div {
   display: flex;
-  width: 70%;
-  height: 70%;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: calc(var(--margin-size)*5);
 }
+
+.background-image {
+  width: 30%;
+  height: 30%;
+}
+
+.hidden {
+  display: none;
+}
+
+#clock {
+  width: 100px;
+}
+

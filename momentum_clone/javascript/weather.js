@@ -12,6 +12,6 @@ function onGeoOk(position){
   });
 }
 function onGeoError(){
-  alert("Can't find you. No weather recognized.");
+  // alert("Can't find you. No weather recognized.");
 }
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
