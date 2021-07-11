@@ -20,7 +20,7 @@ function onLoginSubmit(event){
 }
 
 function handleLinkClick(){ 
-  alert("clicked!");
+  alert("link clicked! moving ... ");
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);

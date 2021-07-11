@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <form id="login-form" class="hidden">
-        <input 
+      <input
         required
-        maxlength = "15"
-        type="text" placeholder="what is your name?"/>
-        <button>Log In</button>
+        maxlength="15"
+        type="text"
+        placeholder="what is your name?"
+      />
+      <button>Log In</button>
     </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <div id = "weather">
-        <span></span><br>
-        <span></span>
-    </div>
-    <br>
+    <h1 id="greeting"></h1>
     <form id="todo-form">
-        <input type="text" placeholder="Write a To-do and press Enter">
+      <input type="text" placeholder="Write a To-do and press Enter" />
+      <button>Enter</button>
     </form>
     <ul id="todo-list"></ul>
+    <div id="weather">
+      <span></span><br />
+      <span></span>
+    </div>
+    <h1 id="clock">00:00:00</h1>
+    <br />
     <h3>
-        <div id="quote">
-            <span id="quote_text"></span><br>
-            <span id="quote_author"></span>
-        </div>
-    </h3>
-     <div>
-         <a href='https://whatdoiknow.tistory.com'>Wanna blog?</a><br>
-         <a href='https://google.com/'>Wanna google?</a>
+      <div id="quote">
+        <span id="quote_text"></span><br />
+        <span id="quote_author"></span>
       </div>
+    </h3>
+    <div>
+      <a href="https://google.com/">Wanna google?</a>
+    </div>
     <script src="javascript/app.js" defer></script>
     <script src="javascript/clock.js" defer></script>
     <script src="javascript/quotes.js" defer></script>
     <script src="javascript/background.js" defer></script>
     <script src="javascript/todo.js" defer></script>
     <script src="javascript/weather.js" defer></script>
-</body>
-</html> 
+  </body>
+</html>

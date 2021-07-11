@@ -1,29 +1,37 @@
 :root {
   /* color */
-  --color-green: rgb(78, 126, 101);
+  --color-gray: #a5a5a5;
+  --color-pink-1: rgb(255, 128, 166);
+  --color-pink-2: rgb(255, 113, 113);
+  --color-pink-3: rgb(255, 66, 98);
+  --color-yellow-1: rgb(255, 196, 0);
+  --color-yellow-2: rgb(130, 200, 0);
+  --color-yellow-3: rgb(0, 255, 64);
+  --color-green-1: rgb(50, 175, 0);
+  --color-green-2: rgb(0, 141, 129);
+  --color-green-3: rgb(0, 107, 50);
+  --color-blue-1: rgb(15, 187, 255);
+  --color-blue-2: rgb(0, 153, 255);
+  --color-blue-3: rgb(48, 71, 114);
+  --color-lilac: rgb(236, 228, 241);
 
   /* size */
-  --input-width:400px;
+  --input-width: 400px;
   --input-height: 50px;
   --font-size: 20px;
   --margin-size: 5px;
   --border-radius: 15px;
+
+  /* const */
+  --deg: 45deg;
 }
 
 html {
   font-family: Consolas, monospace;
 }
 
-button {
-  width: calc(var(--input-width)/3);
-  height: calc(var(--input-height));
-  text-align: center;
-  font-size: var(--font-size);
-  border-radius: var(--border-radius);
-}
-
 input {
-  border: solid 1px var(--color-green);
+  border: solid 1px var(--color-gray);
   width: var(--input-width);
   height: var(--input-height);
   text-align: center;
@@ -31,16 +39,20 @@ input {
   font-size: var(--font-size);
 }
 
-body, 
+body,
 div {
+  background-color: var(--color-lilac);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--margin-size)*5);
+  padding: calc(var(--margin-size) * 5);
 }
 
 .background-image {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 30%;
   height: 30%;
 }
@@ -49,7 +61,57 @@ div {
   display: none;
 }
 
-#clock {
-  width: 100px;
+todo-button {
+  border: none;
+  width: calc(var(--input-width) / 3);
+  height: calc(var(--input-height));
+  text-align: center;
+  font-size: var(--font-size);
+  border-radius: var(--border-radius);
 }
 
+#clock {
+  background: linear-gradient(var(--deg),
+    var(--color-pink-1),
+    var(--color-pink-2),
+    var(--color-pink-3)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+#login-form {
+  background: linear-gradient(var(--deg),
+    var(--color-yellow-1),
+    var(--color-yellow-2),
+    var(--color-yellow-3)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+#todo-list {
+  background: linear-gradient(var(--deg),
+    var(--color-green-1),
+    var(--color-green-2),
+    var(--color-green-3)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+#quote {
+  text-align: center;
+  line-height: calc(var(--font-size) * 2);
+}
+
+#quote_text, 
+#quote_author {
+  background: linear-gradient(var(--deg),
+    var(--color-blue-1),
+    var(--color-blue-2),
+    var(--color-blue-3)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+}
